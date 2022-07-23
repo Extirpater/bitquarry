@@ -23,7 +23,7 @@ app.post('/',(req,res) => {
 var url = req.body.url
 
  console.log(url)
-
+ 
  var dataToSend;
  // spawn new child process to call the python script
  const python = spawn('python3', ['script.py',url]);
