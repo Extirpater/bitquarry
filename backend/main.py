@@ -25,13 +25,14 @@ Image_Folder = 'Images_1'
 def main():
     if not os.path.exists(Image_Folder):
         os.mkdir(Image_Folder)
-    download_images()
-
-def download_images():
     data = input('Enter your search keyword: ')
     num_images = int(input('Enter the number of images you want: '))
+    download_images(data, num_images)
 
-    print('Searching Images....')
+def download_images(data, num_images):
+    # data = input('Enter your search keyword: ')
+    # num_images = int(input('Enter the number of images you want: '))
+    # print('Searching Images....')
 
     search_url = Google_Image + 'q=' + data #'q=' because its a query
 
